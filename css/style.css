@@ -1,0 +1,12 @@
+body {
+    background-image: url('/images/');
+    background-size: contain; 
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.mini{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}

@@ -1,0 +1,29 @@
+body {
+    background-image: url('/images/chandra-oh-4GhHXuXKpDY-unsplash.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat;
+}
+
+.container {
+    height: 600px;
+    margin-top: 150px;
+    margin-bottom: 75px;
+    margin-left: 200px;
+    margin-right: 200px;
+    border-radius: 50px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    opacity: 0.5;
+   
+}
+.title{
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+}
+
+.hello{
+    margin-top: 100px;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GradeCalc</title>
+    <link rel="stylesheet" href="css/grades.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+  </head>
+  <body>
+    <header>
+      <img class="logo" src="images/logo.png" alt="logo" />
+      <nav>
+        <ul class="nav_links">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="/grades.html">Projects</a></li>
+          <li><a href="#">About us</a></li>
+        </ul>
+      </nav>
+      <a class="cnt" href="mailto:techvance.inc@gmail.com"
+        ><button>Contact</button></a
+      >
+    </header>
+    <div class="container">
+      <table>
+        <thead>
+          <tr>
+            <th>Subject</th>
+            <th>Value</th>
+            <th>Percentage</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Mündliche Leistung:</td>
+            <td><input type="number" id="value1" min="0" max="15" /></td>
+            <td class="percentage-bar">
+              <input
+                type="range"
+                id="percentage1"
+                min="0"
+                max="100"
+                onchange="updatePercentage('percentage1', 'percentage1-value'); checkTotalPercentage();"
+                oninput="updatePercentage('percentage1', 'percentage1-value')"
+              />
+              <div class="percentage-value" id="percentage1-value">0%</div>
+            </td>
+          </tr>
+          <tr>
+            <td>Schriftliche Leistung:</td>
+            <td><input type="number" id="value2" min="0" max="15" /></td>
+            <td class="percentage-bar">
+              <input
+                type="range"
+                id="percentage2"
+                min="0"
+                max="100"
+                onchange="updatePercentage('percentage2', 'percentage2-value'); checkTotalPercentage();"
+                oninput="updatePercentage('percentage2', 'percentage2-value')"
+              />
+              <div class="percentage-value" id="percentage2-value">0%</div>
+            </td>
+          </tr>
+          <tr>
+            <td>Schriftliche Leistung 2:</td>
+            <td><input type="number" id="value3" min="0" max="15" /></td>
+            <td class="percentage-bar">
+              <input
+                type="range"
+                id="percentage3"
+                min="0"
+                max="100"
+                onchange="updatePercentage('percentage3', 'percentage3-value'); checkTotalPercentage();"
+                oninput="updatePercentage('percentage3', 'percentage3-value')"
+              />
+              <div class="percentage-value" id="percentage3-value">0%</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <button id="calculate-btn" onclick="calculateAverage()">
+        Calculate Average
+      </button>
+      <div id="result"></div>
+    </div>
+    <script src="/js/grades.js"></script>
+  </body>
+</html>
